@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Comments">
+
+
+	<select id="getListCount" resultType="int" parameterType="int">
+		select count(*) from comments where BOARD_RE_REF = #{num}
+	</select>
+
+	<select id="list" parameterType="int" resultType="C">
+		select * from comments where BOARD_RE_REF = #{num}
+	</select>
+
+	<insert id="insert" parameterType="C">
+		insert into comments
+		values(com_seq.nextval,#{id},#{content},sysdate,#{board_re_ref})
+	</insert>
+
+
+	<delete id="delete" parameterType="int">
+	delete from comments where num = #{num}
+	</delete>
+
+	<update id="update" parameterType="C">
+		update comments set content = #{content} where num = #{num}
+	</update>
+</mapper>

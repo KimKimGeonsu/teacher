@@ -1,0 +1,50 @@
+@charset "UTF-8";
+*{
+			box-sizing:border-box;
+		}
+		@keyframes view{
+			from{transform:scale(0.1,0.1)}
+			to{transform:scale(1,1)}
+		}
+		form{
+			animation:view 0.5s;
+		}
+		form{
+			width:500px; 
+			height:350px; 
+			margin:0 auto;
+			border:1px solid #fde9e9;
+			padding:10px;
+		}
+		.id,.passwd{
+			width:500px;
+			height:50px;
+			border:1px black #fde9e9;
+			padding:10px;
+			text-indent:10px;
+		}
+		#rm{font-weight:bold; padding:5px 0;}
+		.submitbtn{
+			width:50%;
+			height:50px;
+			background:silver;
+			color:white;
+			font-size:11pt;
+			border-style:none;
+			float:left;
+		}
+		.submitbtn:hover,.join:hover{
+			opacity:0.7;
+		}
+		.join{
+			width:50%;
+			height:50px;
+			background:black;
+			color:white;
+			font-size:11pt;
+			border-style:none;
+			float:left;
+		}
+		input{width:100%; height:30px; 
+		background:#fde9e9; border-style:none; margin:10px 0;}
+		.clearfix{margin-top:30px;}	
